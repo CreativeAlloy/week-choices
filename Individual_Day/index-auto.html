@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Choices</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        
+        <!-- This file receives the current day automatically.
+         You may use it if you are interested in printing out
+         only the current day without giving it too much thought. -->
+
+        <h1>My Choices</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th class="col-day">Day</th>
+                    <th class="col-choices">Choices</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="col-day">
+                        <div class="day-container">
+                            <span id="current-day">Monday</span>
+                            <div class="checkbox-square"></div>
+                        </div>
+                    </td>
+                    <td class="col-choices"></td>
+                </tr>
+        </table>
+    </body>
+
+    <script>
+        var currentDay = document.getElementById("current-day");
+
+        const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+        const latestDate = new Date();
+        let latestDay = weekday[latestDate.getDay()];
+
+        currentDay.innerHTML = latestDay;
+    </script>
+</html>
