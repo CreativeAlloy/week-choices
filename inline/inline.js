@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
         firstDay === "Sunday" ||
         firstDay === "Tuesday" ||
         firstDay === "Thursday" ||
-        firstDay === "Saturday" ||
-        (firstDay === "Monday" && pageDays.length === 2);
+        firstDay === "Saturday" //||
+        //(firstDay === "Monday" && pageDays.length === 2); // Does ChatGPT NOT realize that this literally breaks the Monday-start table? Fucking... worse than a lazy intern
 
     // Calculate the start date of the week based on layout type.
     let weekStart = new Date(today);
